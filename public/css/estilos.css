@@ -1,0 +1,70 @@
+
+.titulo {
+   background-color: #09A0C7 ;
+   padding: 0.4rem;
+}
+
+
+body {
+	 background-color: #09A0C7;
+	 color: black;
+}
+
+.card-footer{
+	background-color: white !important;
+	border: none;
+}
+
+
+.btn-primary{
+	color: #fff !important;
+	background-color:#87021f !important;
+	border-color: #75041d !important;
+
+}
+
+
+.btn-primary:hover{
+	background-color: #77031c !important;
+	
+
+}
+
+.btn-primary:focus{
+	background-color:#70021a !important;
+	box-shadow: 0 0 0 0.2rem rgba(89,5,33,.5) !important;
+
+}
+
+.myButton {
+	box-shadow: 0px 5px 14px 2px #1564ad;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:37px;
+	border:3px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:10px 47px;
+	text-decoration:none;
+	text-shadow:0px 2px 0px #528ecc;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+@media (min-width: 768px){
+	.img-heroe{ 
+		max-width: 80%;
+
+	   }
+	}
+
