@@ -23,12 +23,11 @@ class HeroeRequest extends FormRequest
      */
     public function rules()
     {
-        return[
-            'nombre' => ['required','max:150'],
-            'titulo' => ['required','max:250'],
-            'descripcion' => ['required','max:1000'],
-            'imagen' => 'image|mimes:jped,jpg,png,gif,svg|max:2048',
+        return [
+            'nombre' => ['required', 'max:150'],
+            'titulo' => ['required', 'max:250'],
+            'descripcion' => ['required', 'max:1000'],
+            'imagen' => 'image|mimes:jpeg,jpg,png,gif,svg|max:2048',
         ];
-        
     }
 }

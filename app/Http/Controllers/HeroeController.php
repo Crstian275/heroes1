@@ -16,8 +16,8 @@ class HeroeController extends Controller
      */
     public function index()
     {
-        $heroes=Heroe::all();
-        return view('heroe.index')->with(['heroes' => $heroes]);
+        $heroes = Heroe::all();
+        return view('heroe.index')->with(['heroes' => $heroes]);       
     }
 
     /**
@@ -38,21 +38,17 @@ class HeroeController extends Controller
      */
     public function store(HeroeRequest $request)
     {
-        //$heroe = Heroe::create($request->all());
-        $request->validate();
+        $request->validated();
         $datos = $request->all();
         if($request->file('imagen')){
             $archivo = $request->file('imagen');
-            $nombreArchivo= $archivo->getClientOriginalName();
-            $archivo->move(public_path('img'),$nombreArchivo);
-            $datos['imagen']= 'img/' . $nombreArchivo;
-
+            $nombreArchivo = $archivo->getClientOriginalName();
+            $archivo->move(public_path('img'), $nombreArchivo);
+            $datos['imagen'] = 'img/' . $nombreArchivo;
         }
         $heroe = Heroe::create($datos);
 
-
-
-         return redirect()->route('heroes.index');
+        return redirect()->route('heroes.index');
     }
 
     /**
@@ -87,17 +83,19 @@ class HeroeController extends Controller
     public function update(Request $request, Heroe $heroe)
     {
         //$heroe->update($request->all());
+
         $datos = $request->all();
 
         if($request->file('imagen')){
             $archivo = $request->file('imagen');
-            $nombreArchivo= $archivo->getClientOriginalName();
-            $archivo->move(public_path('img'),$nombreArchivo);
-            $datos['imagen']= 'img/' . $nombreArchivo;
-            file::delete($heroe->imagen);
-
+            $nombreArchivo = $archivo->getClientOriginalName();
+            $archivo->move(public_path('img'), $nombreArchivo);
+            $datos['imagen'] = 'img/' . $nombreArchivo;
+            File::delete($heroe->imagen);
         }
+
         $heroe->update($datos);
+
 
         return redirect()->route('heroes.index');
     }
@@ -111,6 +109,7 @@ class HeroeController extends Controller
     public function destroy(Heroe $heroe)
     {
         $heroe->delete();
+
         return redirect()->route('heroes.index');
     }
 }
