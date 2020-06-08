@@ -1,4 +1,4 @@
-@extends('layouts.plantilla')
+@extends('layouts.app')
 @section('content')
   <h1 class="text-center text-md-left titulo">{{$heroe->nombre}}</h1>
  <div class="row">

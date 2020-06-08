@@ -1,4 +1,4 @@
-@extends('layouts.plantilla')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -19,7 +19,8 @@
 
 		<div class="form row">
 			<label>Descripcion</label>
-			<input type="text" name="descripcion" class="form-control" value="{{$heroe->descripcion}}" required>
+			<textarea name="descripcion" class="form-control" rows="4" required>{{$heroe->descripcion}}
+			</textarea>
 			
 		</div>
 

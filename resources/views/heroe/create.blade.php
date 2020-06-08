@@ -1,7 +1,7 @@
-@extends('layouts.plantilla')
+@extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container text-center">
 	<h1>Hèroe nuevo</h1>
 	<form method="POST" action="{{route('heroes.store')}}" enctype="multipart/form-data">
 		@csrf
@@ -18,7 +18,7 @@
 
 		<div class="form row">
 			<label>Descripcion</label>
-			<input type="text" name="descripcion" class="form-control"required>
+			<textarea name="descripcion" class="form-control" rows="4" required></textarea>
 			
 		</div>
 
@@ -27,8 +27,9 @@
 			<input type="file" name="imagen" class="form-control-file">
 			
 		</div>
-		<button type="submit" class="myButton mt-4 d-block text-center">Enviar</button>
-
+		<div class="text-center">
+		<button type="submit" class="myButton mt-4 text-center">Enviar</button>
+</div>
 
 	</form>
 </div>

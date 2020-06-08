@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/','MainController@index')->name('house');
+Route::get('/','MainController@index')->name('myhouse');
 
 Route::get('heroe/{heroe}','MainController@show')->name('heroe');
 
@@ -24,3 +24,7 @@ Route::put('heroes/{heroe}','heroeController@update')->name('heroes.update');
 Route::delete('heroes/{heroe}','heroeController@destroy')->name('heroes.destroy');
 Route::get('heroes/{heroe}/edit','heroeController@edit')->name('heroes.edit');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

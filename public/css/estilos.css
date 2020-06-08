@@ -6,6 +6,7 @@
 
 
 body {
+	border-image: url('../img/fondo.jpg');
 	 background-color: #09A0C7;
 	 color: black;
 }
@@ -59,6 +60,10 @@ body {
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+.icono{
+	font-size:2rem;
+	color:black;
 }
 
 @media (min-width: 768px){

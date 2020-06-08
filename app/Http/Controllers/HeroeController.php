@@ -48,7 +48,8 @@ class HeroeController extends Controller
         }
         $heroe = Heroe::create($datos);
 
-        return redirect()->route('heroes.index');
+        return redirect()->route('heroes.index')
+            ->withSuccess("El Heroe con id {$heroe->id} se ha creado");
     }
 
     /**
@@ -97,7 +98,8 @@ class HeroeController extends Controller
         $heroe->update($datos);
 
 
-        return redirect()->route('heroes.index');
+        return redirect()->route('heroes.index')
+            ->withSuccess("El Heroe con id {$heroe->id} se ha actualizado");
     }
 
     /**
@@ -110,6 +112,8 @@ class HeroeController extends Controller
     {
         $heroe->delete();
 
-        return redirect()->route('heroes.index');
+        return redirect()->route('heroes.index')
+        ->withSuccess("El Heroe con id {$heroe->id} se ha Eliminado");
     }
 }
+         
