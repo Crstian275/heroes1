@@ -6,8 +6,10 @@
 
 
 body {
-	border-image: url('../img/fondo.jpg');
-	 background-color: #09A0C7;
+	background-image: url('../img/fondo.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color:#09A0C7;
 	 color: black;
 }
 

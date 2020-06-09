@@ -30,6 +30,8 @@
 			
 		</div>
 		<button type="submit" class="myButton mt-4 d-block text-center">Enviar</button>
+		<a href="{{route(('heroes.index'))}}" class="myButton btn btn-danger btn-lg text-light">
+		<i class="fas fs-arrow-left">Volver</i></a>
 
 
 	</form>

@@ -11,22 +11,22 @@
 				<thead class="thead-light">
 					<tr>
 
-				<th> id </th>
+				<th class="d-none d-md-table-cell"> id </th>
 				<th> nombre </th>
-				<th> Titulo </th>
-				<th> Descripcion </th>
-				<th> imagen </th>
+				<th  class="d-none d-md-table-cell"> Titulo </th>
+				<th class="d-none d-md-table-cell"> Descripcion </th>
+				<th  class="d-none d-md-table-cell"> imagen </th>
 				<th> Acciones </th>	
 				</tr>
 				</thead>
 				<tbody>
 					@foreach($heroes as $heroe)
 					<tr>
-					<td>{{$heroe->id}}</td>
+					<td  class="d-none d-md-table-cell">{{$heroe->id}}</td>
 					<td>{{$heroe->nombre}}</td>
-					<td>{{$heroe->titulo}}</td>
-					<td>{{$heroe->descripcion}}</td>
-					<td>{{$heroe->imagen}}</td>
+					<td  class="d-none d-md-table-cell">{{$heroe->titulo}}</td>
+					<td  class="d-none d-md-table-cell">{{$heroe->descripcion}}</td>
+					<td  class="d-none d-md-table-cell">{{$heroe->imagen}}</td>
 					<td>
 						<a href="{{route('heroes.edit',['heroe'=>$heroe->id])}}"class="myButton mb-3 d-block text-center"><i class="fas fa-edit icono"></i></a>
 						<form method="POST" class="d-inline" action="{{route('heroes.destroy',['heroe'=>$heroe->id])}}">

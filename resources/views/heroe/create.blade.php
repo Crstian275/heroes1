@@ -29,6 +29,9 @@
 		</div>
 		<div class="text-center">
 		<button type="submit" class="myButton mt-4 text-center">Enviar</button>
+		<button type="Reset" class="myButton mt-4 d-block text-center">limpiar formulario</button>
+		<a href="{{route(('heroes.index'))}}" class="myButton mt-4 text-center btn btn-danger btn-lg text-light">
+		<i class="fas fs-arrow-left">Volver</i></a>
 </div>
 
 	</form>
